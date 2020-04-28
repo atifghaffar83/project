@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Compose Page</title>
+        <%- include("partials/header") -%>
+    </head>
+    <body>
+
+
+
+
+        <% findItemsRender.forEach(myfunction)%>
+
+            <%function myfunction(item){%>
+                <h1><%=item.titlePost%></h1>
+                <p><%=item.postDetail.substring(0,100)+ " ..."%>
+
+                <a href="/post/<%=item.titlePost%>">Read More</a>
+
+                </p>
+
+
+            <%}%>
+
+
+        <footer>
+            <%- include('partials/footer') -%>
+        </footer>
+    </body>
+</html>
